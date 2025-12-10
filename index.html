@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aetheria Solutions | Network and Data Systems Integrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Aetheria Solutions provides engineering-grade system integration for ELV, structured cabling, WiFi, FDAS, solar, LED installations, and data engineering services." />
+
+  <meta name="keywords" content="Aetheria Solutions, systems integrator, ELV design, structured cabling, FDAS, WiFi design, LED installation, solar design, data engineering, dashboards, Philippines, EPD consulting" />
+  <meta name="author" content="Aetheria Solutions" />
+  <link rel="canonical" href="https://aetheriasolutions.net" />
+
+  <meta property="og:title" content="Aetheria Solutions | Network and Data Systems Integrator" />
+  <meta property="og:description" content="Design-first consulting for ELV, connectivity, solar, and data systems. Engineering, Procurement, and Deployment services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aetheriasolutions.net" />
+  <meta property="og:image" content="https://aetheriasolutions.net/assets/aetheria-logo.png" />
+  <meta property="og:site_name" content="Aetheria Solutions" />
+
+  <style>
+    /* CSS Variables */
+    :root {
+      --color-bg: #050b11;
+      --color-bg-alt: #0b1520;
+      --color-card: #0f1e2c;
+      --color-accent: #0e7178;
+      --color-accent-soft: #12a3b0;
+      --color-text: #e5f2ff;
+      --color-text-muted: #a6b3c5;
+      --color-border: #1f3347;
+      --max-width: 1120px;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
+      --transition-fast: 0.18s ease-out;
+    }
+
+    /* Global Reset and Utilities */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      /* Subtle radial gradient for depth */
+      background: radial-gradient(circle at top, #0d2233 0, #050b11 45%, #020509 100%);
+      color: var(--color-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    
+    /* Scrollbar Styling for aesthetics (optional) */
+    body::-webkit-scrollbar {
+      width: 8px;
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--color-bg);
+    }
+    body::-webkit-scrollbar-thumb {
+      background: var(--color-accent);
+      border-radius: 10px;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      /* Glassmorphism effect */
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(5, 11, 17, 0.96), rgba(5, 11, 17, 0.75));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+      /* Ensures the logo is visible against the dark background */
+      filter: drop-shadow(0 0 5px rgba(18, 163, 176, 0.5));
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-title span:first-child {
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .nav-title span:last-child {
+      font-size: 11px;
+      color: var(--color-text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--color-text-muted);
+      border: 1px solid transparent;
+      transition: var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--color-text);
+      border-color: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .nav-cta {
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      /* Vibrant accent gradient */
+      background: linear-gradient(135deg, var(--color-accent) 0, var(--color-accent-soft) 100%);
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(11, 173, 190, 0.4);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+      /* Ensures button works as a click target on touch devices */
+      -webkit-tap-highlight-color: transparent; 
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px); /* Subtle lift effect */
+      box-shadow: 0 14px 38px rgba(11, 173, 190, 0.55);
+      opacity: 0.98;
+    }
+    
+    .nav-cta svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* Main Content Area */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 40px;
+      align-items: center;
+      padding: 26px 0 34px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 26, 39, 0.8);
+      font-size: 11px;
+      color: var(--color-text-muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-badge span {
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(11, 173, 190, 0.16);
+      color: var(--color-accent-soft);
+      font-weight: 500;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 4vw, 38px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: 0.03em;
+    }
+
+    .hero h1 span {
+      color: var(--color-accent-soft);
+    }
+
+    .hero p {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      max-width: 540px;
+      margin-bottom: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .btn-secondary {
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(7, 19, 30, 0.85);
+      color: var(--color-text);
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-fast);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(9, 25, 38, 0.9);
+      transform: translateY(-1px);
+    }
+
+    .hero-meta {
+      font-size: 11px;
+      color: var(--color-text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 4px;
+    }
+
+    .hero-meta strong {
+      color: var(--color-text);
+      font-weight: 500;
+    }
+
+    .hero-visual {
+      justify-self: stretch;
+    }
+
+    .hero-card {
+      border-radius: 24px;
+      /* Unique card background using a radial and linear gradient */
+      background: radial-gradient(circle at top left, rgba(18, 163, 176, 0.18), transparent 50%),
+                  linear-gradient(145deg, #071420, #050b11);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      /* Subtle parallax or glow effect on the card itself */
+      transition: all 0.3s ease;
+    }
+    
+    .hero-card:hover {
+        transform: perspective(1000px) rotateX(1deg) rotateY(1deg) scale(1.01);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-logo-stack {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .hero-logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      /* Accent color background for the symbol */
+      background: radial-gradient(circle at 20% 0, #21d1dd 0, var(--color-accent) 40%, #063b42 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-logo-mark img {
+      width: 26px;
+      height: 26px;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    }
+    
+    /* Placeholder icon styling for a self-contained HTML file */
+    .hero-logo-mark svg {
+        width: 26px;
+        height: 26px;
+        fill: white;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+    }
+
+    .hero-logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hero-logo-text span:first-child {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-logo-text span:last-child {
+      font-size: 11px;
+      color: var(--color-text-muted);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .hero-chip {
+      border-radius: 14px;
+      background: rgba(4, 14, 23, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 10px 10px 9px;
+      font-size: 11px;
+      color: var(--color-text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hero-chip strong {
+      font-size: 12px;
+      color: var(--color-text);
+      font-weight: 500;
+    }
+
+    .hero-chip span.tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-accent-soft);
+    }
+
+    .hero-footnote {
+      font-size: 10px;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+    }
+
+    /* General Section Styling */
+    section {
+      padding: 30px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 17px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      max-width: 460px;
+    }
+
+    .section-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 11px;
+      color: var(--color-text-muted);
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--color-bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 12px 38px rgba(0, 0, 0, 0.4);
+      transition: border-color var(--transition-fast), background var(--transition-fast);
+    }
+    
+    .card:hover {
+        border-color: var(--color-accent);
+        background: linear-gradient(145deg, #0b1520, #07121b);
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 11px;
+      color: var(--color-accent-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 4px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 11px;
+      color: var(--color-text-muted);
+      background: rgba(8, 20, 30, 0.9);
+    }
+
+    .list {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .list li {
+      font-size: 13px;
+      padding-left: 14px;
+      position: relative;
+      color: var(--color-text-muted);
+      margin-bottom: 4px;
+    }
+
+    .list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent-soft);
+      font-size: 14px;
+      line-height: 1; /* Aligns the bullet better */
+    }
+
+    /* EPD Approach Steps */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .step {
+      /* Unique accent background for steps */
+      background: radial-gradient(circle at top, rgba(18, 163, 176, 0.1), rgba(6, 18, 30, 0.98));
+      border-radius: 16px;
+      padding: 18px 16px 16px;
+      border: 1px solid rgba(49, 181, 198, 0.2);
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .step:hover {
+        border-color: rgba(49, 181, 198, 0.5);
+    }
+
+    .step-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 4px;
+      color: var(--color-accent-soft);
+    }
+
+    .step strong {
+      display: block;
+      font-size: 15px;
+      color: var(--color-text);
+      margin-bottom: 6px;
+    }
+    
+    .step p {
+        color: var(--color-text-muted);
+        line-height: 1.5;
+    }
+
+    /* About / Experience Section */
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 18px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .stat {
+      background: rgba(7, 20, 31, 0.96);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 10px 10px 9px;
+      font-size: 11px;
+      color: var(--color-text-muted);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 15px;
+      color: var(--color-text);
+      margin-bottom: 2px;
+    }
+
+    .badge-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-text-muted);
+      margin-top: 14px; /* Increased margin for better separation */
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 18px;
+    }
+
+    form {
+      display: grid;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    label {
+      font-size: 12px;
+      margin-bottom: 4px;
+      display: block;
+      color: var(--color-text-muted);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background: rgba(4, 14, 23, 0.96);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 8px 10px;
+      color: var(--color-text);
+      font-size: 13px;
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      -webkit-appearance: none; /* Removes default styling on iOS */
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(166, 179, 197, 0.65);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--color-accent-soft);
+      box-shadow: 0 0 0 1px rgba(33, 188, 204, 0.5);
+      background: rgba(6, 17, 28, 0.98);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .contact-details {
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+
+    .contact-details p {
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .contact-details strong {
+        color: var(--color-text);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .contact-details a {
+      color: var(--color-accent-soft);
+      transition: color var(--transition-fast);
+    }
+    
+    .contact-details a:hover {
+        color: #fff;
+    }
+
+    .contact-highlights {
+      margin-top: 10px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-highlights div {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 16px 20px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 11px;
+      color: var(--color-text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    footer span {
+      opacity: 0.9;
+    }
+
+    footer a {
+      color: var(--color-text-muted);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 880px) {
+      .hero,
+      .two-column,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        gap: 26px;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* Keep 3-column on tablet if space allows */
+        gap: 10px;
+      }
+      
+      .nav-links {
+        /* Hide traditional nav links on smaller screens to keep header clean */
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+        /* Reduce steps to 2 columns on smaller mobiles */
+        .steps {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+
+    @media (max-width: 520px) {
+      main {
+        padding-top: 28px;
+      }
+
+      section {
+        padding: 24px 0;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .steps {
+        /* Single column for EPD steps on very small screens */
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .form-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      
+      .hero-meta {
+          flex-direction: column;
+          gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <img src="/assets/aetheria-logo-mark.png" alt="Aetheria Solutions logo" class="nav-logo" />
+        <div class="nav-title">
+          <span>Aetheria Solutions</span>
+          <span>Network &amp; Data Systems Integrator</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#services" aria-label="Services section">Services</a>
+        <a href="#approach" aria-label="EPD Approach section">EPD Approach</a>
+        <a href="#solutions" aria-label="Solutions section">Solutions</a>
+        <a href="#about" aria-label="About us section">About</a>
+        <a href="#contact" aria-label="Contact us section">Contact</a>
+      </nav>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">
+        Book a consult
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div>
+        <div class="hero-badge">
+          <span>EPD Consulting</span>
+          Engineering • Procurement • Deployment
+        </div>
+        <h1>
+          Design-first system integration for
+          <span>network, power, and data.</span>
+        </h1>
+        <p>
+          Aetheria Solutions delivers extra-low voltage, connectivity, solar, and data engineering services for organizations that need reliable infrastructure and clear visibility of their operations.
+        </p>
+
+        <div class="hero-actions">
+          <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">
+            Schedule a discovery call
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});">
+            View capabilities
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <span><strong>Core focus:</strong> ELV • WiFi • Solar • Data</span>
+          <span><strong>Service model:</strong> Consulting, design, build</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <article class="hero-card">
+          <div class="hero-logo-stack">
+            <div class="hero-logo-mark">
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+
+  <path
+    fill="#ffffff"
+    d="M2.728 14.404 L7.773 5.692 L12.241 5.692 L13.253 7.443
+       L10.922 7.454 L11.65 8.773 L9.364 8.773 L8.796 7.704
+       L4.942 14.404 Z
+       M9.637 9.25 L14.3 9.25 L15.288 10.967
+       L12.9 10.967 L13.833 12.604 L16.163 12.604
+       L17.221 14.401 L7.363 14.401 L8.398 12.605
+       L11.46 12.605 Z"
+  />
+
+</svg>
+
+
+            </div>
+            <div class="hero-logo-text">
+              <span>AETHERIA</span>
+              <span>Part of nexBT Holdings Inc.</span>
+            </div>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-chip">
+              <span class="tag">Engineering &amp; Infrastructure</span>
+              <strong>Extra-Low Voltage Systems</strong>
+              <span>Structured cabling, FDAS, WiFi, LED, control rooms.</span>
+            </div>
+            <div class="hero-chip">
+              <span class="tag">Energy &amp; Resilience</span>
+              <strong>Solar Design &amp; Deployment</strong>
+              <span>PV sizing, layout, and integration with existing loads.</span>
+            </div>
+            <div class="hero-chip">
+              <span class="tag">Data &amp; Analytics</span>
+              <strong>Data Engineering</strong>
+              <span>Data cleanup, structuring, and readiness for analytics.</span>
+            </div>
+            <div class="hero-chip">
+              <span class="tag">Visibility</span>
+              <strong>Dashboards &amp; KPIs</strong>
+              <span>Operational, financial, and technical dashboards.</span>
+            </div>
+          </div>
+
+          <p class="hero-footnote">
+            We combine system integration skills with data engineering to make infrastructure measurable and manageable from day one.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Services</h2>
+          <p class="section-subtitle">
+            Aetheria Solutions covers the full lifecycle: assessment, design, documentation, deployment support, and handover. You can engage by project or as an ongoing consulting partner.
+          </p>
+        </div>
+        <div class="section-pill">Design-first | Vendor-agnostic</div>
+      </div>
+
+      <div class="services-grid">
+        <article class="card">
+          <div class="tagline">Engineering &amp; Integration</div>
+          <h3>Extra-Low Voltage and Network Systems</h3>
+          <p>
+            We design ELV and connectivity systems that are simple to deploy, maintain, and scale. Designs are standards-based and implementation-ready.
+          </p>
+          <ul class="list">
+            <li>Structured cabling (fiber and copper) and MDF/IDF layout</li>
+            <li>WiFi planning and installation for offices, hospitals, and campuses</li>
+            <li>FDAS and life-safety integration with building systems</li>
+            <li>LED display and lighting integration with control systems</li>
+          </ul>
+          <div class="pill-list">
+            <span class="pill">Compliance-focused drawings</span>
+            <span class="pill">Implementation playbooks</span>
+            <span class="pill">As-built documentation</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="tagline">Energy &amp; Infrastructure</div>
+          <h3>Solar Panel Design &amp; Installation Support</h3>
+          <p>
+            We plan solar systems that match site conditions, load behaviour, and budget. Our work can be handed to your preferred EPC partner or implemented with our network.
+          </p>
+          <ul class="list">
+            <li>PV sizing and string configuration</li>
+            <li>Roof and ground-mount layout recommendations</li>
+            <li>Single-line diagrams and protection concepts</li>
+            <li>Basic performance and payback modelling</li>
+          </ul>
+          <div class="pill-list">
+            <span class="pill">Rooftop commercial</span>
+            <span class="pill">SME and industrial loads</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="tagline">Data &amp; Analytics</div>
+          <h3>Data Cleanup and Engineering</h3>
+          <p>
+            We prepare your data so it can be trusted by operations and management. The focus is on practicality and alignment with your actual workflows.
+          </p>
+          <ul class="list">
+            <li>Data profiling, deduplication, and standardization</li>
+            <li>Design of staging tables and data models</li>
+            <li>Scripts and documentation for repeatable cleanup</li>
+          </ul>
+          <div class="pill-list">
+            <span class="pill">Billing and collections data</span>
+            <span class="pill">Operational logs</span>
+            <span class="pill">IoT and sensor sources</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="tagline">Decision Support</div>
+          <h3>Dashboard and KPI Development</h3>
+          <p>
+            We turn operational requirements into dashboards that answer specific questions for management, operations, and engineering teams.
+          </p>
+          <ul class="list">
+            <li>Requirements workshop and KPI mapping</li>
+            <li>Dashboard layout and data pipeline design</li>
+            <li>Handover with documentation and training</li>
+          </ul>
+          <div class="pill-list">
+            <span class="pill">Executive overviews</span>
+            <span class="pill">Operations consoles</span>
+            <span class="pill">Technical performance views</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Approach</h2>
+          <p class="section-subtitle">
+            We follow an **Engineering, Procurement, and Deployment (EPD)** model. Each phase is designed to be modular, so you can engage us for the full cycle or only where you need support.
+          </p>
+        </div>
+        <div class="section-pill">Structured and traceable delivery</div>
+      </div>
+      
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-title">Phase 01</div>
+          <strong>Engineering</strong>
+          <p>
+            Site assessment, requirements capture, and system architecture. We prepare drawings, BOMs, and implementation notes aligned with standards and your constraints.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-title">Phase 02</div>
+          <strong>Procurement Support</strong>
+          <p>
+            Material lists, vendor-neutral specifications, and comparison of options. We help you balance performance, cost, and availability while keeping designs intact.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-title">Phase 03</div>
+          <strong>Deployment &amp; Handover</strong>
+          <p>
+            Implementation guidance, quality checks, punch-list review, and final as-built documentation. Where needed, we train onsite teams on maintenance and monitoring.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Solutions</h2>
+          <p class="section-subtitle">
+            Aetheria Solutions is built for organizations that want integrated infrastructure and measurable outcomes, without unnecessary complexity.
+          </p>
+        </div>
+        <div class="section-pill">Built on real deployment experience</div>
+      </div>
+
+      <div class="services-grid">
+        <article class="card">
+          <div class="tagline">Built environments</div>
+          <h3>Smart Workplaces and Facilities</h3>
+          <p>
+            We design the physical and digital backbone for offices, schools, and hospitals.
+          </p>
+          <ul class="list">
+            <li>Campus WiFi and structured cabling</li>
+            <li>ELV integration for safety and security</li>
+            <li>LED and display solutions for operations and wayfinding</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="tagline">Critical operations</div>
+          <h3>Data-Driven Infrastructure</h3>
+          <p>
+            We connect infrastructure with analytics to support operational decisions.
+          </p>
+          <ul class="list">
+            <li>Consolidation of infrastructure metrics and alarms</li>
+            <li>Dashboards for utilization, incidents, and performance</li>
+            <li>Foundations for future automation and AI analytics</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">About</h2>
+          <p class="section-subtitle">
+            Aetheria Solutions operates under nexBT Holdings Inc. and combines engineering, networking, and data expertise into one focused systems integration practice.
+          </p>
+        </div>
+        <div class="section-pill">Independent | Experience-led</div>
+      </div>
+
+      <div class="two-column">
+        <div>
+          <div class="tagline">Who we are</div>
+          <h3 style="font-size: 16px; margin-bottom: 6px;">Engineers and data practitioners solving practical problems.</h3>
+          <p style="font-size: 13px; color: var(--color-text-muted);">
+            The founders of Aetheria Solutions have hands-on experience delivering network, ELV, and data projects across enterprises, telecom, and infrastructure environments.
+            We focus on clear designs, clean data, and handovers that operations teams can sustain.
+          </p>
+          <p style="font-size: 13px; color: var(--color-text-muted); margin-top: 8px;">
+            As part of the nexBT group, we can collaborate with a wider ecosystem for implementation while keeping our consulting independent and objective.
+          </p>
+          <div class="badge-inline">
+            <span>Part of nexBT Holdings Inc.</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="stats-grid">
+            <div class="stat">
+              <strong>Multi-domain</strong>
+              <span>Networking, ELV, solar, and data engineering in a single team.</span>
+            </div>
+            <div class="stat">
+              <strong>Design-first</strong>
+              <span>Drawings, BOMs, and procedures ready for implementation.</span>
+            </div>
+            <div class="stat">
+              <strong>Data-aware</strong>
+              <span>Infrastructure designs that consider monitoring and analytics from day one.</span>
+            </div>
+            <div class="stat">
+              <strong>Scalable</strong>
+              <span>Engage per-project or as a longer-term consulting partner.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">
+            Share a brief description of your project or environment. We will respond with clarifying questions and a proposed next step.
+          </p>
+        </div>
+        <div class="section-pill">Consulting across the Philippines</div>
+      </div>
+
+      <div class="contact-grid">
+        <article class="card">
+    <div class="tagline">Start a project</div>
+    <h3>Request a consultation</h3>
+    
+    <form id="contactForm">
+        <div class="form-row">
+            <div>
+                <label for="name">Name</label>
+                <input id="name" name="Name" type="text" placeholder="Your full name" required />
+            </div>
+            <div>
+                <label for="company">Company</label>
+                <input id="company" name="Company" type="text" placeholder="Organization name" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="Email" type="email" placeholder="you@company.com" required />
+            </div>
+            <div>
+                <label for="service">Primary service</label>
+                <input id="service" name="PrimaryService" type="text" placeholder="ELV, WiFi, solar, data, dashboards…" />
+            </div>
+        </div>
+
+        <div>
+            <label for="message">Project summary</label>
+            <textarea id="message" name="ProjectSummary" placeholder="Briefly describe your site, systems, or data challenge." required></textarea>
+        </div>
+
+        <button type="submit" class="nav-cta" id="submitButton">
+            Send request
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </button>
+        
+        <p id="formStatus" style="font-size: 13px; color: var(--color-accent-soft); margin-top: 10px;"></p>
+    </form>
+</article>
+
+        <div class="contact-details">
+          <p>
+            <strong>Direct email</strong>
+            <a href="mailto:hello@aetheriasolutions.net">hello@aetheriasolutions.net</a>
+          </p>
+          <p>
+            <strong>Group Affiliation</strong>
+            Aetheria Solutions is part of **nexBT Holdings Inc.**
+          </p>
+          <div class="contact-highlights">
+            <div>
+              <strong>How we work</strong><br />
+              Short discovery call → scope confirmation → design or audit engagement → regular checkpoints → handover.
+            </div>
+            <div>
+              <strong>Typical starting points</strong><br />
+              - New building or renovation needing ELV, WiFi, or LED design<br />
+              - Solar feasibility for existing facilities<br />
+              - Data cleanup before dashboard or analytics projects<br />
+              - Review of existing infrastructure for gaps and optimization
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Aetheria Solutions. All rights reserved.</span>
+    <span>Part of <a href="https://www.nexbtholdings.com/" target="_blank" rel="noopener noreferrer">nexBT Holdings Inc.</a></span>
+  </footer>
+
+  <script>
+    // Set current year dynamically for the footer copyright
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Apps Script Submission Handler
+    const form = document.getElementById('contactForm');
+    const statusMessage = document.getElementById('formStatus');
+    const submitButton = document.getElementById('submitButton');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzOHQmqWo34eeyzFimECzoXJIUoKvxVzAjDUXZY-2STlZbEVyGIR3rIZU-thRJO2K4n/exec'; // *** REPLACE THIS URL ***
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        // Convert FormData to URLSearchParams for Apps Script
+        const urlEncodedData = new URLSearchParams(formData).toString();
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        statusMessage.textContent = 'Sending request, please wait...';
+        statusMessage.style.color = '#fff';
+
+        fetch(scriptURL, { 
+            method: 'POST', 
+            body: urlEncodedData,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            mode: 'no-cors' // Required for seamless cross-origin communication with Apps Script
+        })
+        .then(response => {
+            // Apps Script response is opaque, rely on successful promise resolution
+            statusMessage.textContent = '✅ Request sent successfully! We will be in touch soon.';
+            statusMessage.style.color = 'var(--color-accent-soft)';
+            form.reset();
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            statusMessage.textContent = '❌ An error occurred. Please try again or email us directly.';
+            statusMessage.style.color = '#ff6b6b';
+        })
+        .finally(() => {
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Send request <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>';
+        });
+    });
+</script>
+</body>
+</html>
