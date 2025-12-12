@@ -1139,13 +1139,13 @@
                 <input id="email" name="Email" type="email" placeholder="you@company.com" required />
             </div>
             <div>
-                <label for="service">Primary service</label>
+                <label for="service">Primary required service</label>
                 <input id="service" name="PrimaryService" type="text" placeholder="ELV, WiFi, solar, data, dashboards…" />
             </div>
         </div>
 
         <div>
-            <label for="message">Project summary</label>
+            <label for="message">Requirement Description</label>
             <textarea id="message" name="ProjectSummary" placeholder="Briefly describe your site, systems, or data challenge." required></textarea>
         </div>
 
@@ -1203,7 +1203,7 @@
     const form = document.getElementById('contactForm');
     const statusMessage = document.getElementById('formStatus');
     const submitButton = document.getElementById('submitButton');
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzOHQmqWo34eeyzFimECzoXJIUoKvxVzAjDUXZY-2STlZbEVyGIR3rIZU-thRJO2K4n/exec'; // *** REPLACE THIS URL ***
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzr_mTtRG8yVkrRcMTXSgV2QNndtIAEFnG26_rfYOycnJc6o9gl_5BNyb0jfzG7SrcY/exec'; // *** REPLACE THIS URL ***
 
     form.addEventListener('submit', e => {
         e.preventDefault();
